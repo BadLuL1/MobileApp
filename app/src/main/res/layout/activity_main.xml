@@ -10,12 +10,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="491dp"
-        android:layout_height="738dp"
+        android:layout_width="491sp"
+        android:layout_height="738sp"
         android:layout_marginStart="-3dp"
         android:layout_marginTop="-3dp"
         android:layout_marginEnd="-3dp"
         android:layout_marginBottom="-3dp"
+        android:contentDescription="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +26,12 @@
 
     <TextView
         android:id="@+id/hkd_tic"
-        android:layout_width="170dp"
-        android:layout_height="52dp"
-        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="120dp"
-        android:gravity="top"
+        android:layout_marginStart="125sp"
+        android:layout_marginTop="71sp"
+        android:layout_marginEnd="120sp"
         android:text="@string/hkd_tic"
         android:textAppearance="@style/hkd_tic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,11 +42,12 @@
         android:id="@+id/amblem"
         android:layout_width="114dp"
         android:layout_height="115.73dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="130dp"
         android:layout_marginTop="27dp"
+        android:layout_marginEnd="167dp"
         android:background="@drawable/amblem"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hkd_tic" />
 
@@ -56,30 +56,27 @@
         android:id="@+id/login"
         android:layout_width="260dp"
         android:layout_height="38dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="75dp"
         android:layout_marginTop="28dp"
-        android:clipToOutline="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amblem">
+        app:layout_constraintTop_toBottomOf="@+id/amblem"
+        android:background="@drawable/edit_text_bg">
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="260dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#00000000"
-            android:drawableLeft="@drawable/ic_user1"
-            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_user1"
+            android:drawablePadding="8sp"
             android:hint="@string/e_mail"
+            android:padding="5sp"
             android:textColor="#E6000000"
-            android:textColorHint="#88000000"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColorHint="#FF606162"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -89,32 +86,84 @@
         android:id="@+id/pass"
         android:layout_width="260dp"
         android:layout_height="38dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="75dp"
-        android:layout_marginTop="28dp"
-        android:clipToOutline="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_bg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login">
 
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="260dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#00000000"
-            android:drawableLeft="@drawable/ic_lock1"
-            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_lock1"
+            android:drawablePadding="8sp"
             android:hint="@string/password"
+            android:background="@drawable/uyeol"
+            android:padding="5sp"
             android:textColor="#E6000000"
-            android:textColorHint="#88000000"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Giriş butonu -->
+
+    <Button
+        android:id="@+id/btn_giris_yap"
+        android:layout_width="170sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="119dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/login"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="@string/forget_pass"
+        android:textColor="@color/forget_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_giris_yap" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/signHereText"
+        android:textColor="@color/SignUpText"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_uye_ol"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_uye_ol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/uyeol"
+        android:text="@string/signHereButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,17 @@
     <string name="hkd_tic">HKD.TIC</string>
     <string name="e_mail">e-mail</string>
     <string name="password">şifre</string>
+    <string name="description">description</string>
+    <string name="giris_yap">Giriş yap</string>
+    <string name="forget_pass">Şifremi Unuttum</string>
+    <string name="login">Giriş Yap</string>
+    <string name="signHereText">Buradan üye olabilirsiniz -></string>
+    <string name="signHereButton">Üye Ol!</string>
+    <string name="name">adınız</string>
+    <string name="surname">soyadınız</string>
+    <string name="phone_number">telefon numarası</string>
+    <string name="phone_example">5xx xxx xx xx</string>
+    <string name="signUp">Kayıt Ol</string>
+
+
 </resources>
