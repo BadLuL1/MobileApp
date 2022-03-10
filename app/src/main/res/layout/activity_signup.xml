@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="491dp"
+        android:layout_height="738dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginBottom="-3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/amblem"
+        android:layout_width="105dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="167dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/amblem" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/SignUp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amblem">
+
+        <EditText
+            android:id="@+id/name_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_log_in"
+            android:drawablePadding="8sp"
+            android:hint="@string/name"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/surname_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_log_in"
+            android:drawablePadding="8sp"
+            android:hint="@string/surname"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_SignUp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/e_mail_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_user1"
+            android:drawablePadding="8sp"
+            android:hint="@string/e_mail"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber_SignUp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/phoneNumber_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_log_in"
+            android:drawablePadding="8sp"
+            android:hint="@string/phone_number"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname_SignUp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/passoword_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_lock1"
+            android:drawablePadding="8sp"
+            android:hint="@string/password"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/e_mail_SignUp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_kayit_ol"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginEnd="132dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/signUp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amblem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
