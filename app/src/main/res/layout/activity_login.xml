@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <!-- HKD.TIC -->
 
@@ -101,7 +101,7 @@
             android:drawableStart="@drawable/ic_lock1"
             android:drawablePadding="8sp"
             android:hint="@string/password"
-            android:background="@drawable/uyeol"
+            android:background="@drawable/transparentbg"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
@@ -128,42 +128,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pass" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btn_sifremi_unuttum"
+        android:layout_width="137dp"
+        android:layout_height="40dp"
         android:layout_marginTop="3dp"
+        android:background="@drawable/transparentbg"
         android:text="@string/forget_pass"
         android:textColor="@color/forget_pass"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_giris_yap" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_giris_yap"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:text="@string/signHereText"
         android:textColor="@color/SignUpText"
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_uye_ol"
         app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sifremi_unuttum" />
 
     <Button
         android:id="@+id/btn_uye_ol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="80dp"
-        android:background="@drawable/uyeol"
+        android:background="@drawable/transparentbg"
         android:text="@string/signHereButton"
+        android:textColor="@color/SignUpText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sifremi_unuttum" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

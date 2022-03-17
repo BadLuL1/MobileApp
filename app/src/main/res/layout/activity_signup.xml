@@ -33,12 +33,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/SignUp"
+        android:id="@+id/name_space"
         android:layout_width="260dp"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="75dp"
         android:layout_marginTop="28dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/amblem">
 
@@ -50,101 +51,163 @@
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_log_in"
             android:drawablePadding="8sp"
+            android:autofillHints="no"
             android:hint="@string/name"
+            android:inputType="text"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/surname_space"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_space">
 
         <EditText
             android:id="@+id/surname_SignUp"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_marginTop="19dp"
             android:background="@drawable/edit_text_bg"
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_log_in"
             android:drawablePadding="8sp"
             android:hint="@string/surname"
+            android:inputType="text"
+            android:autofillHints="no"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_SignUp"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <EditText
-            android:id="@+id/e_mail_SignUp"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="19dp"
-            android:background="@drawable/edit_text_bg"
-            android:backgroundTint="#00000000"
-            android:drawableStart="@drawable/ic_user1"
-            android:drawablePadding="8sp"
-            android:hint="@string/e_mail"
-            android:padding="5sp"
-            android:textColor="#E6000000"
-            android:textColorHint="#FF606162"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phoneNumber_SignUp"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/phoneNumber_space"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surname_space">
 
         <EditText
             android:id="@+id/phoneNumber_SignUp"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_marginTop="19dp"
             android:background="@drawable/edit_text_bg"
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_log_in"
             android:drawablePadding="8sp"
             android:hint="@string/phone_number"
+            android:importantForAutofill="no"
+            android:inputType="phone"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/surname_SignUp"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/e_mail_space"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber_space">
+
+        <EditText
+            android:id="@+id/e_mail_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/edit_text_bg"
+            android:backgroundTint="#00000000"
+            android:drawableStart="@drawable/ic_user1"
+            android:drawablePadding="8sp"
+            android:hint="@string/e_mail"
+            android:autofillHints="no"
+            android:inputType="text"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/password_space"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e_mail_space">
 
         <EditText
             android:id="@+id/passoword_SignUp"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:layout_marginTop="19dp"
             android:background="@drawable/edit_text_bg"
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_lock1"
             android:drawablePadding="8sp"
             android:hint="@string/password"
+            android:autofillHints="no"
+            android:inputType="text"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/e_mail_SignUp"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_kayit_ol"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="318dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/button_bg"
         android:text="@string/signUp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amblem" />
+        app:layout_constraintTop_toBottomOf="@+id/password_space" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

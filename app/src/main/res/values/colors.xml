@@ -12,4 +12,6 @@
     <color name="forget_pass">#494949</color>
     <color name="SignUpText">#AA494949</color>
     <color name="SignUpButton">#CC494949</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent50">#65000000</color>
 </resources>

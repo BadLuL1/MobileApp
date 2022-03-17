@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">HkdTic</string>
     <string name="hkd_tic">HKD.TIC</string>
+    <string name="hkd_ticaret">HKD.TICARET</string>
     <string name="e_mail">e-mail</string>
     <string name="password">şifre</string>
     <string name="description">description</string>
@@ -14,6 +15,20 @@
     <string name="phone_number">telefon numarası</string>
     <string name="phone_example">5xx xxx xx xx</string>
     <string name="signUp">Kayıt Ol</string>
+    <string name="wizard_password">Şifre sihirbazına hoş geldiniz. Lütfen şifrenizi nasıl kurtarmak istediğinizi seçiniz.</string>
+    <string name="send_email_code">E-postama doğrulama kodu gönder.</string>
+    <string name="enter_email">Lütfen şifresini unutmuş olduğunuz e-posta adersini yazınız.</string>
+    <string name="confirmation">Onayla</string>
+    <string name="look_email">Böyle bir e-posta sisteme kayıtlı ise mail gönderilecektir. Gönderilen mailden şifrenizi sıfırlayabilirsiniz.</string>
+    <string name="go_login">Giriş Ekranına Git</string>
+    <string name="product_name">Ürün Adı Denemesi 1 bu deşneme yazısıdır.</string>
+    <string name="product_price">99.90</string>
+    <string name="product_currency">₺</string>
+    <string name="add_card">SEPETE EKLE</string>
+    <string name="search">Ürün ara</string>
+    <string name="kesfet">Keşfet</string>
+    <string name="categories">Kategoriler</string>
+
 
 
 </resources>
