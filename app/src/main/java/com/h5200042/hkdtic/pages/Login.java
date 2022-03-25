@@ -1,4 +1,4 @@
-package com.h5200042.hkdtic;
+package com.h5200042.hkdtic.pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.h5200042.hkdtic.R;
+
 public class Login extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +20,7 @@ public class Login extends AppCompatActivity {
         Button buttonSignUp = findViewById(R.id.btn_uye_ol);
 
         buttonSignUp.setOnClickListener(v -> {
-            Intent intent = new Intent(this,SignUp.class);
+            Intent intent = new Intent(this, SignUp.class);
 
             startActivity(intent);
         });

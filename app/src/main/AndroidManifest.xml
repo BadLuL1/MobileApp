@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.h5200042.hkdtic">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HkdTic">
         <activity
-            android:name=".Home"
+            android:name=".pages.ProductDetails"
             android:exported="false" />
         <activity
-            android:name=".ConfirmedResetPass"
+            android:name=".pages.ConfirmedResetPass"
             android:exported="false" />
         <activity
-            android:name=".EnterEmail"
+            android:name=".pages.EnterEmail"
             android:exported="false" />
         <activity
-            android:name=".ChooseScreenResetPass"
+            android:name=".pages.ChooseScreenResetPass"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".pages.Home"
+            android:exported="false" />
+        <activity
+            android:name=".pages.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignUp"
+            android:name=".pages.SignUp"
             android:exported="false" />
     </application>
 

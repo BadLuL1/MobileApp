@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ITOPYA/Desktop/hkdticcopy/app/src/main/res/layout/activity_home.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/ITOPYA/Desktop/hkdticcopy/app/src/main/res/layout/bottom_bar.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/ITOPYA/Desktop/hkdticcopy/app/src/main/res/layout/list_of_products.xml" value="0.33" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/add_card.xml" value="0.3712962962962963" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/amblem.xml" value="0.39692307692307693" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/button_bg.xml" value="0.3390625" />
@@ -18,6 +21,7 @@
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_lock1.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_log_in.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_login1.xml" value="0.387037037037037" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_orders.xml" value="0.3861111111111111" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_resource_package.xml" value="0.3390625" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_search.xml" value="0.3390625" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/ic_shopping_card.xml" value="0.3390625" />
@@ -26,19 +30,34 @@
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/login.xml" value="0.39692307692307693" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/product_photo_radius.xml" value="0.3712962962962963" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/search_bar.xml" value="0.3390625" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/transparentbg.xml" value="0.33384615384615385" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/user_1.xml" value="0.39692307692307693" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/uye_ol.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/drawable/uyeol.xml" value="0.3390625" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout-w1240dp/activity_login2.xml" value="0.24866131191432397" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout-w936dp/activity_login2.xml" value="0.2223360655737705" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_categories.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_choose_screen_reset_pass.xml" value="0.31521739130434784" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_confirmed_reset_pass.xml" value="0.31521739130434784" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_enter_email.xml" value="0.31521739130434784" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_forget_password.xml" value="0.3197463768115942" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_home_screen.xml" value="0.31521739130434784" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_login.xml" value="0.29483695652173914" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_login2.xml" value="0.29483695652173914" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_orders.xml" value="0.33016304347826086" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_product_details.xml" value="0.2803442028985507" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_shopping_cart.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/activity_signup.xml" value="0.33" />
-        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/list_of_products.xml" value="0.33" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/bottom_bar.xml" value="0.25" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/list_of_products.xml" value="0.25" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/menu.xml" value="0.29483695652173914" />
         <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/sign_up.xml" value="0.3328804347826087" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/layout/tool_bar.xml" value="0.29483695652173914" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/menu/bottommenu.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/menu/menu.xml" value="0.3229166666666667" />
+        <entry key="..\:/Users/ITOPYA/Desktop/okulProjesi/hkdtic/app/src/main/res/menu/topmenu.xml" value="0.33" />
       </map>
     </option>
   </component>

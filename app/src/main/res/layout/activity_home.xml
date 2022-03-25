@@ -4,90 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".pages.Home">
 
-
-    <ImageView
-        android:id="@+id/buttom_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cloudwp" />
-
-
-    <!-- Burada kaldım logoları düzenleyeceğim ve keşfetin altına yazı gelecek.-->
-    <TextView
-        android:id="@+id/home_logo"
-        android:layout_width="93dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="20dp"
-        android:drawableLeft="@drawable/ic_home1"
-        android:paddingStart="31dp"
-        android:paddingEnd="32dp"
-        android:paddingBottom="21dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/buttom_bar"
-        app:layout_constraintTop_toTopOf="@+id/buttom_bar" />
-
-    <TextView
-        android:id="@+id/txt_kesfet"
-        android:layout_width="wrap_content"
-        android:layout_height="14dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="32dp"
-        android:gravity="top"
-        android:text="@string/kesfet"
-        android:textAppearance="@style/kesfet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttom_bar" />
-
-
-    <TextView
-        android:id="@+id/categories_logo"
-        android:layout_width="93dp"
-        android:layout_height="53dp"
-        android:drawableStart="@drawable/ic_categories"
-        android:paddingStart="32dp"
-        android:paddingEnd="33dp"
-        android:paddingTop="2dp"
-        android:paddingBottom="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toEndOf="@+id/home_logo"
-        app:layout_constraintTop_toTopOf="@+id/buttom_bar" />
-
-
-    <TextView
-        android:id="@+id/txt_categories"
-        android:layout_width="wrap_content"
-        android:layout_height="14dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="top"
-        android:text="@string/categories"
-        android:textAppearance="@style/categories"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/categories_logo"
-        app:layout_constraintStart_toEndOf="@+id/home_logo"
-        app:layout_constraintTop_toTopOf="@+id/buttom_bar" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.4"
+        android:layout_width="491sp"
+        android:layout_height="738dp"
+        android:alpha="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background1" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottombar"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottommenu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
         android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -101,126 +53,36 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/title_icons_label"
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/Toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="41dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/hkd_ticaret"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:gravity="top"
-                    android:text="@string/hkd_ticaret"
-                    android:textAppearance="@style/hkd_ticaret"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/user_logo"
-                    android:layout_width="30dp"
-                    android:layout_height="38dp"
-                    android:drawableStart="@drawable/ic_user1"
-                    android:padding="3dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/bookmark_logo"
-                    android:layout_width="30dp"
-                    android:layout_height="38dp"
-                    android:layout_marginEnd="6dp"
-                    android:drawableStart="@drawable/ic_bookmark1"
-                    android:padding="3dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/user_logo"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcv_products"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="227dp"
+                android:layout_height="50dp"
+                android:background="@color/transparent"
+                android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:itemCount="5"
-                tools:listitem="@layout/list_of_products" />
+                app:menu="@menu/topmenu"
+                app:title="HKD.TIC"
+                app:titleMarginStart="27dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="357dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="27dp"
-                android:layout_marginTop="17dp"
-                android:layout_marginEnd="27dp"
-                android:background="@drawable/search_bar"
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_icons_label">
+                app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+                app:layout_constraintVertical_bias="0.0"
+                tools:itemCount="10"
+                tools:listitem="@layout/list_of_products" />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/search"
-                    android:textSize="16sp"
-                    android:drawablePadding="13dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:drawableLeftCompat="@drawable/ic_search" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="344dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="34dp"
-                android:layout_marginTop="145dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="63dp"
-                    android:layout_height="62dp"
-                    android:layout_marginStart="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="1dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/instagramlogo" />
-
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="1dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/whatsapplogo" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

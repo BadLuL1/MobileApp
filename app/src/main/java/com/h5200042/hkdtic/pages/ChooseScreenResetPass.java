@@ -1,4 +1,4 @@
-package com.h5200042.hkdtic;
+package com.h5200042.hkdtic.pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,19 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class ConfirmedResetPass extends AppCompatActivity {
+import com.h5200042.hkdtic.R;
+
+public class ChooseScreenResetPass extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmed_reset_pass);
+        setContentView(R.layout.activity_choose_screen_reset_pass);
 
-        Button button = findViewById(R.id.btn_go_login_screen);
+
+        Button button = findViewById(R.id.btn_choose_send_mail);
 
         button.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Login.class);
+            Intent intent = new Intent(this, EnterEmail.class);
             startActivity(intent);
         });
+
+
 
     }
 }
