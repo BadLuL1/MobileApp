@@ -110,6 +110,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
                     assert user != null;
                     if(user.isEmailVerified()){
+
+
+
                         //redirect
                         startActivity(new Intent(Login.this, Home.class));
                     }else{

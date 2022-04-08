@@ -28,6 +28,7 @@ public class Categories extends AppCompatActivity {
         //Set home selected
         bottomNavigationView.setSelectedItemId(R.id.ico_categories);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override

@@ -15,4 +15,5 @@
     <color name="transparent">#00000000</color>
     <color name="transparent50">#65000000</color>
     <color name="bottombar">#F5DAFF</color>
+    <color name="logoBackGround">#FDFBFF</color>
 </resources>

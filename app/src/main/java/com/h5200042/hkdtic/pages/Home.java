@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -12,16 +13,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.h5200042.hkdtic.R;
 import com.h5200042.hkdtic.adaptor.ProductsAdapter;
 import com.h5200042.hkdtic.model.Products;
-import com.h5200042.hkdtic.network.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +36,13 @@ import io.reactivex.schedulers.Schedulers;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
 // kendime son not: veri tabanından ürün çekilecek
-// kayıt olan kullanıcılar firebase store da kullanıcıların bilgileri gelecek ad soyad gözükecek.
+// kayıt olan kullanıcılar firebase store da kullanıcıların bilgileri gelecek ad soyad gözükecek. YAPTIM.
 
-    private RecyclerView recyclerView;
-    private FirebaseAuth mAuth;
+    RecyclerView recyclerView;
+    FirebaseAuth mAuth;
+    DatabaseReference database;
+    ProductsAdapter productsAdapter;
+    ArrayList<Products> list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,56 +51,51 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         mAuth = FirebaseAuth.getInstance();
 
-
-
-
-
-
         Toolbar toolbar = findViewById(R.id.Toolbar);
         setSupportActionBar(toolbar);
 
 
-        getProducts();
         bottomBarOptions();
+        getProducts();
 
 
 
     }
 
 
+    public void getProducts(){
+        FirebaseDatabase db = FirebaseDatabase.getInstance("https://hkdtic-default-rtdb.europe-west1.firebasedatabase.app");
 
-    public void getProducts() {
+        recyclerView = findViewById(R.id.rcvProducts);
+        database = db.getReference("Products");
+        //database yanlış linkden çekiyor bu link olmadı bunu halledersen ürün çekmeyi halledersin.
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
-        new Service().getServiceApi().getProducts().
-                subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<List<Products>>() {
+        list = new ArrayList<>();
+        productsAdapter = new ProductsAdapter(this,list);
+        recyclerView.setAdapter(productsAdapter);
 
-                    List<Products> products = new ArrayList<>();
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
 
-                    }
+                    Products products = dataSnapshot.getValue(Products.class);
+                    list.add(products);
 
-                    @Override
-                    public void onNext(@NonNull List<Products> productsParam) {
-                        products = productsParam;
 
-                    }
+                }
+                productsAdapter.notifyDataSetChanged();
 
-                    @Override
-                    public void onError(@NonNull Throwable e) {
+            }
 
-                    }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-                    @Override
-                    public void onComplete() {
-                        if(products.size()>0){
-                            initRecycleView(products);
-                        }
-                    }
-                });
+            }
+        });
     }
 
     public void bottomBarOptions(){
@@ -132,36 +133,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         });
     }
-
-    private void initRecycleView(List<Products> productsList) {
-        recyclerView = findViewById(R.id.rcvProducts);
-
-        ProductsAdapter productsAdapter = new ProductsAdapter(productsList, getApplicationContext(), new ProductsAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(Products clickProducts) {
-                Intent DetailsProduct = new Intent(Home.this,ProductDetails.class);
-                DetailsProduct.putExtra("txtProductPageName",clickProducts.getTxtProductListName());
-
-                startActivity(DetailsProduct);
-            }
-        });
-
-
-        recyclerView.setAdapter(productsAdapter);
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
-        recyclerView.setLayoutManager(gridLayoutManager);
-
-
-
-
-
-    }
-
-
-
-
-
 
 
     @Override
