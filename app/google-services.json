@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "435920330554",
+    "project_id": "hkdtic",
+    "storage_bucket": "hkdtic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435920330554:android:e147e33ee4817da4c43a03",
+        "android_client_info": {
+          "package_name": "com.h5200042.hkdtic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435920330554-tnoc65mbr6i9ngt1c8rpfql3uc5d1mlh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrOYUwMXSluS_LlviPOzw8yT3n6L868CU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435920330554-tnoc65mbr6i9ngt1c8rpfql3uc5d1mlh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

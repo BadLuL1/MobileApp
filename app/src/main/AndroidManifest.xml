@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HkdTic">
         <activity
+            android:name=".pages.Cart"
+            android:exported="false" />
+        <activity
+            android:name=".pages.Orders"
+            android:exported="false" />
+        <activity
+            android:name=".pages.Categories"
+            android:exported="false" />
+        <activity
             android:name=".pages.ProductDetails"
             android:exported="false" />
         <activity

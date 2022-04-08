@@ -12,9 +12,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.h5200042.hkdtic.R;
 import com.h5200042.hkdtic.adaptor.ProductsAdapter;
 import com.h5200042.hkdtic.model.Products;
@@ -28,29 +31,35 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class Home extends AppCompatActivity {
-// kendime son not: adaptor ve holderi bağlamadan uyuma!!
-// yada kategoriler ekranı ve siparişlerim ekranını yap!!
+public class Home extends AppCompatActivity implements View.OnClickListener {
+// kendime son not: veri tabanından ürün çekilecek
+// kayıt olan kullanıcılar firebase store da kullanıcıların bilgileri gelecek ad soyad gözükecek.
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
+
+
+
+
         Toolbar toolbar = findViewById(R.id.Toolbar);
         setSupportActionBar(toolbar);
 
 
-
-
         getProducts();
+        bottomBarOptions();
+
 
 
     }
-
-
 
 
 
@@ -86,6 +95,42 @@ public class Home extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void bottomBarOptions(){
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.Navigationbar);
+
+        //Set home selected
+        bottomNavigationView.setSelectedItemId(R.id.ico_discover);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.ico_discover:
+                        return true;
+
+                    case R.id.ico_categories:
+                        startActivity(new Intent(getApplicationContext(),Categories.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.ico_orders:
+                        startActivity(new Intent(getApplicationContext(),Orders.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.ico_cart:
+                        startActivity(new Intent(getApplicationContext(),Cart.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+
+        });
     }
 
     private void initRecycleView(List<Products> productsList) {
@@ -147,4 +192,8 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }

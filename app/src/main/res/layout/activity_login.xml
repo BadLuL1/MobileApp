@@ -53,27 +53,34 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-        android:id="@+id/login"
+        android:id="@+id/verifyemail"
         android:layout_width="260dp"
         android:layout_height="38dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="75dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amblem"
-        android:background="@drawable/edit_text_bg">
+        app:layout_constraintTop_toBottomOf="@+id/amblem">
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/emailReset"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:layout_marginBottom="3dp"
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_user1"
             android:drawablePadding="8sp"
             android:hint="@string/e_mail"
+            android:inputType="text"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
@@ -88,20 +95,23 @@
         android:layout_height="38dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
         android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login">
+        app:layout_constraintTop_toBottomOf="@+id/verifyemail">
 
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:background="@drawable/transparentbg"
             android:backgroundTint="#00000000"
             android:drawableStart="@drawable/ic_lock1"
             android:drawablePadding="8sp"
             android:hint="@string/password"
-            android:background="@drawable/transparentbg"
+            android:inputType="textPassword"
             android:padding="5sp"
             android:textColor="#E6000000"
             android:textColorHint="#FF606162"
