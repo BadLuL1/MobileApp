@@ -15,6 +15,7 @@
     <string name="phone_number">telefon numarası</string>
     <string name="phone_example">5xx xxx xx xx</string>
     <string name="signUp">Kayıt Ol</string>
+    <string name="kaydet">KAYDET</string>
     <string name="wizard_password">Şifre sihirbazına hoş geldiniz. Lütfen şifrenizi nasıl kurtarmak istediğinizi seçiniz.</string>
     <string name="send_email_code">E-postama doğrulama kodu gönder.</string>
     <string name="enter_email">Lütfen şifresini unutmuş olduğunuz e-posta adersini yazınız.</string>
@@ -33,10 +34,37 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">Welcome !</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">Login failed</string>
+    <string name="kategoriler_baslik">KATEGORİLER</string>
+    <string name="sepet_baslik">SEPET</string>
+    <string name="siparis_baslik">SİPARİŞLER</string>
+    <string name="adres_ekle">Adres Ekle</string>
+    <string name="Adres_bilgi_baslik">Adres Bilgileri</string>
+    <string name="todo_elektronik">Elektronik kategori buton</string>
+    <string name="todo_elektronik1">Elektronik kategori yazi</string>
+    <string name="todo_evyasam">Ev Yasam kategori buton</string>
+    <string name="todo_evyasam1">Ev Yasam kategori yazi</string>
+    <string name="todo_annebebek">Anne Bebek kategori buton</string>
+    <string name="todo_annebebek1">Anne Bebek kategori yazi</string>
+    <string name="todo_kisiselbakim">Kişisel Bakım kategori buton</string>
+    <string name="todo_kisiselbakim1">Kişisel Bakım kategori yazi</string>
+    <string name="todo_hediyelik">Hediyelik kategori buton</string>
+    <string name="todo_hediyelik1">Hediyelik kategori yazi</string>
+    <string name="todo_otoaksesuar">Oto Aksesuar kategori buton</string>
+    <string name="todo_otoaksesuar1">Oto Aksesuar kategori yazi</string>
+    <string name="new_adres_ad">İsminiz</string>
+    <string name="new_adres_soyad">Soyadınız</string>
+    <string name="new_adres_TC">TC Kimlik Numarası</string>
+    <string name="new_adres_il">İl</string>
+    <string name="new_adres_ilce">İlçe</string>
+    <string name="new_adres_postakodu">Posta Kodu</string>
+    <string name="new_adres_acikadres">Adres; Mahalle,cadde,sokak vb.</string>
+    <string name="new_adres_telefon">Telefon: xxxx xxx xx xx</string>
+    <string name="new_adres_adresadi">Adres ismi: Ev, iş yeri vb.</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
 
 
 </resources>

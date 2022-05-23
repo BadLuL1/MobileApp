@@ -72,7 +72,7 @@ public class EnterEmail extends AppCompatActivity {
                     startActivity(new Intent(EnterEmail.this, ConfirmedResetPass.class));
                 }
                 else{
-                    Toast.makeText(EnterEmail.this,"asd",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EnterEmail.this,"Böyle bir e-mail sisteme kayıtlı değildir.",Toast.LENGTH_SHORT).show();
                 }
             }
         });

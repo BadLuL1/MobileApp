@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.h5200042.hkdtic.R;
+import com.h5200042.hkdtic.model.CartModel;
 
 public class Categories extends AppCompatActivity {
 
@@ -40,6 +41,10 @@ public class Categories extends AppCompatActivity {
                         return true;
 
                     case R.id.ico_categories:
+                        finish();
+                        overridePendingTransition(0, 0);
+                        startActivity(getIntent());
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ico_orders:
@@ -48,7 +53,7 @@ public class Categories extends AppCompatActivity {
                         return true;
 
                     case R.id.ico_cart:
-                        startActivity(new Intent(getApplicationContext(),Cart.class));
+                        startActivity(new Intent(getApplicationContext(), Cart.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -59,9 +64,4 @@ public class Categories extends AppCompatActivity {
         });
     }
 
-    private void goPage(Class<?> cls) {
-        Intent intent = new Intent(this, cls);
-
-        startActivity(intent);
-    }
 }

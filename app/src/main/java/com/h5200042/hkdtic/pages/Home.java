@@ -34,9 +34,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class Home extends AppCompatActivity implements View.OnClickListener {
-// kendime son not: veri tabanından ürün çekilecek
-// kayıt olan kullanıcılar firebase store da kullanıcıların bilgileri gelecek ad soyad gözükecek. YAPTIM.
+public class Home extends AppCompatActivity{
 
     RecyclerView recyclerView;
     FirebaseAuth mAuth;
@@ -68,7 +66,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         recyclerView = findViewById(R.id.rcvProducts);
         database = db.getReference("Products");
-        //database yanlış linkden çekiyor bu link olmadı bunu halledersen ürün çekmeyi halledersin.
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
@@ -110,6 +107,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.ico_discover:
+                        finish();
+                        overridePendingTransition(0, 0);
+                        startActivity(getIntent());
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ico_categories:
@@ -141,7 +142,6 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
         if (id == R.id.ico_search) {
             Toast.makeText(getApplicationContext(), "Arama butonuna tıklandı.", Toast.LENGTH_LONG).show();
-            goPage(Login.class); //arama ikonuna tıklanıldığında giriş ekranına atıyor.
         } else if (id == R.id.ico_bookmark) {
             Toast.makeText(getApplicationContext(), "Kaydedilenler butonuna tıklandı.", Toast.LENGTH_LONG).show();
         } else if (id == R.id.ico_profile) {
@@ -154,17 +154,5 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.topmenu, menu);
         return true;
-    }
-
-
-    private void goPage(Class<?> cls) {
-        Intent intent = new Intent(this, cls);
-
-        startActivity(intent);
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 }

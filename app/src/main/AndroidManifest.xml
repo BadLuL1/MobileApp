@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HkdTic">
         <activity
+            android:name=".pages.CreditCard"
+            android:exported="false" />
+        <activity
+            android:name=".pages.NewAdress"
+            android:exported="false" />
+        <activity
+            android:name=".pages.Adress"
+            android:exported="false" />
+        <activity
+            android:name=".pages.PaymentScreen"
+            android:exported="false" />
+        <activity
+            android:name=".pages.DetailScreen"
+            android:exported="false" />
+        <activity
             android:name=".pages.Cart"
             android:exported="false" />
         <activity
@@ -20,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".pages.Categories"
-            android:exported="false" />
-        <activity
-            android:name=".pages.ProductDetails"
             android:exported="false" />
         <activity
             android:name=".pages.ConfirmedResetPass"

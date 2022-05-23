@@ -16,4 +16,5 @@
     <color name="transparent50">#65000000</color>
     <color name="bottombar">#F5DAFF</color>
     <color name="logoBackGround">#FDFBFF</color>
+    <color name="addCart">#A657D9</color>
 </resources>

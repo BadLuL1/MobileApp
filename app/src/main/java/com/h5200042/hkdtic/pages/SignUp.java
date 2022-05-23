@@ -44,17 +44,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         editTextEmail = (EditText) findViewById(R.id.e_mail_SignUp);
         editTextPhoneNumber = (EditText) findViewById(R.id.phoneNumber_SignUp);
         editTextPassword = (EditText) findViewById(R.id.password_SignUp);
-
-
-
-
-
-
-
-
-
     }
-
 
     @Override
     public void onClick(View v) {
@@ -124,7 +114,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                             Toast.makeText(SignUp.this, "Başarılı bir şekilde kayıt yapıldı!", Toast.LENGTH_LONG).show();
 
                             DAOUser dao = new DAOUser();
-                            User usr = new User(editTextName.getText().toString(),editTextSurname.getText().toString(),editTextPhoneNumber.getText().toString(),editTextEmail.getText().toString(),editTextPassword.getText().toString());
+                            User usr = new User(editTextName.getText().toString(),editTextSurname.getText().toString(),
+                                    editTextPhoneNumber.getText().toString(),editTextEmail.getText().toString(),
+                                    editTextPassword.getText().toString());
                             dao.add(usr).addOnSuccessListener(suc->
                             {
                                 Toast.makeText(getApplicationContext(),"Kayıt alındı.",Toast.LENGTH_SHORT).show();

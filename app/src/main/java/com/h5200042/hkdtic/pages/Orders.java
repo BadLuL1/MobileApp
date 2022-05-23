@@ -44,6 +44,10 @@ public class Orders extends AppCompatActivity {
                         return true;
 
                     case R.id.ico_orders:
+                        finish();
+                        overridePendingTransition(0, 0);
+                        startActivity(getIntent());
+                        overridePendingTransition(0, 0);
                         return true;
 
                     case R.id.ico_cart:
@@ -56,11 +60,5 @@ public class Orders extends AppCompatActivity {
             }
 
         });
-    }
-
-    private void goPage(Class<?> cls) {
-        Intent intent = new Intent(this, cls);
-
-        startActivity(intent);
     }
 }

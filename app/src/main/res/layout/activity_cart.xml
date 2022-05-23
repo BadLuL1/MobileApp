@@ -6,16 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".pages.Cart">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="Sepet Ekranı"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/img_background_detailScreen2"
+        android:layout_width="491sp"
+        android:layout_height="738dp"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background1" />
+
+    <TextView
+        android:id="@+id/currency_cart2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="top"
+        android:text="@string/product_currency"
+        android:textAppearance="@style/product_currency_cart"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintStart_toEndOf="@+id/txt_total_price" />
+
+    <Button
+        android:id="@+id/complateShopping"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/complate_shopping"
+        android:text="Alışverişi Tamamla"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="TOPLAM:"
+        android:textColor="#202020"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="15dp"
+        android:text="0"
+        android:textColor="#118C4F"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/Navigationbar"
@@ -30,4 +82,53 @@
         app:menu="@menu/bottommenu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/onlyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="HKD.TIC"
+        app:titleMarginStart="27dp">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="115dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_cartList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/list_of_cart_products" />
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courierprime_regular"
+        android:text="@string/sepet_baslik"
+        android:textColor="#202020"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onlyTitle" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

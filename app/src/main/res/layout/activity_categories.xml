@@ -6,19 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".pages.Categories">
 
-    <!--<com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/Navigationbar"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/bottombar"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+    <ImageView
+        android:id="@+id/img_background_detailScreen5"
+        android:layout_width="491sp"
+        android:layout_height="738dp"
+        android:alpha="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottommenu">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background1" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/onlyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="HKD.TIC"
+        app:titleMarginStart="27dp">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -36,13 +47,148 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="Kategoriler Ekranı"
-        android:textSize="30sp"
+        android:fontFamily="@font/belleza_regular"
+        android:text="@string/kategoriler_baslik"
+        android:textColor="#202020"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/onlyTitle" />
+
+    <ImageButton
+        android:id="@+id/btn_elektronik"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/elektronik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:contentDescription="@string/todo_elektronik" />
+
+    <ImageView
+        android:id="@+id/txt_elektronik_img"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/elektronik1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_elektronik"
+        app:layout_constraintStart_toStartOf="@+id/btn_elektronik"
+        app:layout_constraintTop_toTopOf="@+id/btn_elektronik"
+        app:layout_constraintVertical_bias="0.481"
+        android:contentDescription="@string/todo_elektronik1" />
+
+    <ImageButton
+        android:id="@+id/btn_evyasam"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/evyasam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_elektronik"
+        android:contentDescription="@string/todo_evyasam"/>
+
+    <ImageView
+        android:id="@+id/txt_evyasam_img"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_evyasam"
+        app:layout_constraintStart_toStartOf="@+id/btn_evyasam"
+        app:layout_constraintTop_toTopOf="@+id/btn_evyasam"
+        app:srcCompat="@drawable/evyasam1"
+        android:contentDescription="@string/todo_evyasam1" />
+
+    <ImageButton
+        android:id="@+id/btn_annebebek"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/annebebek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_evyasam"
+        android:contentDescription="@string/todo_annebebek" />
+
+    <ImageView
+        android:id="@+id/txt_annebebek_img"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_annebebek"
+        app:layout_constraintStart_toStartOf="@+id/btn_annebebek"
+        app:layout_constraintTop_toTopOf="@+id/btn_annebebek"
+        app:srcCompat="@drawable/annebebek1"
+        android:contentDescription="@string/todo_annebebek1" />
+
+    <ImageButton
+        android:id="@+id/btn_kisbakim"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/kisbakvekozmetik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_annebebek"
+        android:contentDescription="@string/todo_kisiselbakim" />
+
+    <ImageView
+        android:id="@+id/txt_kisiselbakim_img"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kisbakim"
+        app:layout_constraintStart_toStartOf="@+id/btn_kisbakim"
+        app:layout_constraintTop_toTopOf="@+id/btn_kisbakim"
+        app:srcCompat="@drawable/kisbakvekozmetik1"
+        android:contentDescription="@string/todo_kisiselbakim1" />
+
+    <ImageButton
+        android:id="@+id/btn_hediyelik"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/hediyelik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_kisbakim"
+        android:contentDescription="@string/todo_hediyelik" />
+
+    <ImageView
+        android:id="@+id/txt_hediyelik_img"
+        android:layout_width="126dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_hediyelik"
+        app:layout_constraintStart_toStartOf="@+id/btn_hediyelik"
+        app:layout_constraintTop_toTopOf="@+id/btn_hediyelik"
+        app:srcCompat="@drawable/hediyelik1"
+        android:contentDescription="@string/todo_hediyelik1" />
+
+    <ImageButton
+        android:id="@+id/btn_otoaksesuar"
+        android:layout_width="323dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/otoaksesuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hediyelik"
+        android:contentDescription="@string/todo_otoaksesuar" />
+
+    <ImageView
+        android:id="@+id/txt_otoaksesuar_img"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_otoaksesuar"
+        app:layout_constraintStart_toStartOf="@+id/btn_otoaksesuar"
+        app:layout_constraintTop_toTopOf="@+id/btn_otoaksesuar"
+        app:srcCompat="@drawable/otoaksesuar1"
+        android:contentDescription="@string/todo_otoaksesuar1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
