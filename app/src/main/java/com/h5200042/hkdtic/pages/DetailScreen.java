@@ -28,14 +28,19 @@ import java.util.HashMap;
 
 public class DetailScreen extends AppCompatActivity {
 
-    ImageView img_detailPhoto;
+    ImageView img_detailPhoto, btn_plus, btn_minus;
     TextView txt_detailProductName;
     TextView txt_sellerName;
     TextView txt_explanation;
     TextView txt_product_price_detail;
+    TextView quantity;
     Button btn_addCart;
 
+    int totalQuantity = 1;
+
+
     Products products=null;
+
 
     int totalPrice = 0;
 
@@ -57,13 +62,46 @@ public class DetailScreen extends AppCompatActivity {
             products = (Products) object;
         }
 
+
         getDetails();
+        getProductPiece();
         getCart();
         bottomBarOptions();
 
     }
 
 
+    public void getProductPiece(){
+
+        quantity = (TextView) findViewById(R.id.textView34);
+
+        btn_plus = findViewById(R.id.plusCircle);
+        btn_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(totalQuantity<20){
+                    totalQuantity++;
+                    quantity.setText(String.valueOf(totalQuantity));
+                    txt_product_price_detail.setText(String.valueOf(totalQuantity * Integer.parseInt(products.txtProductPrice)));
+                    totalPrice=totalQuantity * Integer.parseInt(products.txtProductPrice);
+                }
+            }
+        });
+
+        btn_minus = findViewById(R.id.minusCircle);
+        btn_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(totalQuantity>1){
+                    totalQuantity--;
+                    quantity.setText(String.valueOf(totalQuantity));
+                    txt_product_price_detail.setText(String.valueOf(totalQuantity * Integer.parseInt(products.txtProductPrice)));
+                    totalPrice=totalQuantity * Integer.parseInt(products.txtProductPrice);
+                }
+            }
+        });
+
+    }
 
 
     public void getCart(){
@@ -98,7 +136,7 @@ public class DetailScreen extends AppCompatActivity {
         cartMap.put("totalPrice",totalPrice);
         cartMap.put("sellerName",products.getTxtSellerName());
         cartMap.put("productPhotoURL",products.getImgProductList());
-        cartMap.put("quantity",1);
+        cartMap.put("quantity",totalQuantity);
 
         firestore.collection("AddToCart").document(auth.getCurrentUser().getUid())
                 .collection("CurrentUser").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
@@ -127,7 +165,7 @@ public class DetailScreen extends AppCompatActivity {
             Glide.with(getApplicationContext()).load(products.getImgProductList()).into(img_detailPhoto);
             txt_detailProductName.setText(products.getTxtProductListName());
             txt_explanation.setText(products.getTxtExplanation());
-            txt_product_price_detail.setText(products.getTxtProductPrice());
+            txt_product_price_detail.setText(String.valueOf(products.getTxtProductPrice()));
             txt_sellerName.setText(products.getTxtSellerName());
 
             totalPrice = Integer.parseInt(products.getTxtProductPrice());

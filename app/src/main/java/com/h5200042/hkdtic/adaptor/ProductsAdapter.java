@@ -41,7 +41,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     public void onBindViewHolder(@NonNull ProductsViewHolder holder, int position) {
 
         Products products = list.get(position);
-        holder.txt_product_price.setText(products.getTxtProductPrice());
+        holder.txt_product_price.setText(String.valueOf(products.getTxtProductPrice()));
         holder.txt_product_list_name.setText(products.getTxtProductListName());
         //holder.txt_sellerName.setText(products.getTxtSellerName());
         //holder.txt_explanation.setText(products.getTxtExplanation());

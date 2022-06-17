@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.NewCreditCard">
+
+    <ImageView
+        android:id="@+id/img_background_detailScreen9"
+        android:layout_width="491sp"
+        android:layout_height="738dp"
+        android:alpha="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background1" />
+
+    <Button
+        android:id="@+id/newCardSave"
+        android:layout_width="167dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/complate_shopping"
+        android:text="@string/kaydet"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/onlyTitle5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="HKD.TIC"
+        app:titleMarginStart="27dp">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courierprime_regular"
+        android:text="@string/kart_ekle"
+        android:textColor="#202020"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onlyTitle5" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Navigationbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottombar"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottommenu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cardLastYearCL"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintStart_toEndOf="@+id/cardLastMonthCL"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <EditText
+            android:id="@+id/cardExpirationYear"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawablePadding="8sp"
+            android:hint="yıl"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#E6000000"
+            android:textColorHint="#AA606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cardNameCLa"
+        android:layout_width="327dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <EditText
+            android:id="@+id/cardName"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="3dp"
+            android:backgroundTint="#00000000"
+            android:drawablePadding="8sp"
+            android:hint="@string/card_name"
+            android:inputType="text"
+            android:padding="5sp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+            android:importantForAutofill="no" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_name2"
+        app:layout_constraintBottom_toTopOf="@+id/cardNameCLa"
+        app:layout_constraintStart_toStartOf="@+id/cardNameCLa" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cardNumberCL"
+        android:layout_width="327dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardNameCLa">
+
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawablePadding="8sp"
+            android:hint="@string/card_number2"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#E6000000"
+            android:textColorHint="#FF606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_number"
+        app:layout_constraintBottom_toTopOf="@+id/cardNumberCL"
+        app:layout_constraintStart_toStartOf="@+id/cardNumberCL" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="son kullanma tarihi"
+        app:layout_constraintStart_toStartOf="@+id/cardNumberCL"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberCL" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cardLastMonthCL"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <EditText
+            android:id="@+id/cardExpirationMonth"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawablePadding="8sp"
+            android:hint="ay"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#E6000000"
+            android:textColorHint="#AA606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="CVV"
+        app:layout_constraintStart_toStartOf="@+id/cardCVVCL"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberCL" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cardCVVCL"
+        android:layout_width="80dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/edit_text_bg"
+        app:layout_constraintEnd_toEndOf="@+id/cardNumberCL"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <EditText
+            android:id="@+id/cardCVV"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:backgroundTint="#00000000"
+            android:drawablePadding="8sp"
+            android:hint="CVV"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColor="#E6000000"
+            android:textColorHint="#AA606162"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardLastYearCL"
+        app:srcCompat="@drawable/card" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="106dp"
+        android:text="Kart numarası"
+        android:textColor="#202020"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/cardCVVCL" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Son Kullanma Tarihi"
+        android:textColor="#202020"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Kart Üzerindeki isim"
+        android:textColor="#202020"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <ImageView
+        android:id="@+id/img_info"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardCVVCL"
+        app:layout_constraintEnd_toEndOf="@+id/cardCVVCL"
+        app:srcCompat="@drawable/info" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HkdTic">
         <activity
+            android:name=".pages.Profile"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CAutoAccessory"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CGift"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CPersonalCare"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CMomAndBaby"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CHomeAndLife"
+            android:exported="false" />
+        <activity
+            android:name=".pages.CElectronic"
+            android:exported="false" />
+        <activity
+            android:name=".pages.ConfirmOrder"
+            android:exported="false" />
+        <activity
+            android:name=".pages.Info"
+            android:exported="false" />
+        <activity
             android:name=".pages.CreditCard"
+            android:exported="false" />
+        <activity
+            android:name=".pages.NewCreditCard"
             android:exported="false" />
         <activity
             android:name=".pages.NewAdress"

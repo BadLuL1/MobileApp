@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pages.CreditCard">
+    tools:context=".pages.Info">
 
     <ImageView
-        android:id="@+id/img_background_detailScreen8"
+        android:id="@+id/img_background_detailScreen10"
         android:layout_width="491sp"
         android:layout_height="738dp"
         android:alpha="1"
@@ -15,22 +15,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background1" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/belleza_regular"
-        android:text="@string/kart_baslik"
-        android:textColor="#202020"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onlyTitle4" />
-
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/onlyTitle4"
+        android:id="@+id/onlyTitle6"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,40 +44,40 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <ImageView
-        android:id="@+id/img_addCard"
+    <TextView
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:fontFamily="@font/courierprime_regular"
+        android:text="@string/cvv_nerede"
+        android:textColor="#202020"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onlyTitle4"
-        app:srcCompat="@drawable/plusadress" />
+        app:layout_constraintTop_toBottomOf="@+id/onlyTitle6" />
 
     <TextView
-        android:id="@+id/txt_addCard"
+        android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
-        android:text="Kart Ekle"
-        android:textColor="#9022FF"
-        app:layout_constraintStart_toEndOf="@+id/img_addCard"
-        app:layout_constraintTop_toBottomOf="@+id/onlyTitle4" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="531dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        android:layout_marginTop="48dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/cvv_yazi"
+        android:textColor="#202020"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvc_cards"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/list_of_credit_card" />
-    </ScrollView>
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:srcCompat="@drawable/cardbehind" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

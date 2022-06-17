@@ -1,6 +1,7 @@
 package com.h5200042.hkdtic.adaptor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.h5200042.hkdtic.R;
 import com.h5200042.hkdtic.model.CartModel;
+import com.h5200042.hkdtic.pages.DetailScreen;
 
 import org.w3c.dom.Text;
 
@@ -60,24 +62,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         Glide.with(context).load(cartModelList.get(position).getProductPhotoURL()).into(holder.productPhoto);
 
-        /*holder.addItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Map<String,Object> map1 = new HashMap<>();
-                map1.put("quantity",cartModelList.get(position).getQuantity());
-
-            }
-        });
-
-        holder.removeItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Map<String,Object> map1 = new HashMap<>();
-                map1.put("quantity",cartModelList.get(position).getQuantity());
-
-            }
-        });*/
 
 
 

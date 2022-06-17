@@ -145,7 +145,7 @@ public class Home extends AppCompatActivity{
         } else if (id == R.id.ico_bookmark) {
             Toast.makeText(getApplicationContext(), "Kaydedilenler butonuna tıklandı.", Toast.LENGTH_LONG).show();
         } else if (id == R.id.ico_profile) {
-            Toast.makeText(getApplicationContext(), "Profil butonuna tıklandı.", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(getApplicationContext(),Profile.class));
         }
         return true;
     }

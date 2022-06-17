@@ -62,11 +62,14 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="7dp"
         app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toStartOf="@+id/minusCircle"
         app:layout_constraintStart_toStartOf="@+id/img_bottombar2"
         app:layout_constraintTop_toTopOf="@+id/img_bottombar2">
 
@@ -82,7 +85,6 @@
             android:textAppearance="@style/product_price"
             android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,6 +104,38 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#202020"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/img_bottombar2" />
+
+    <ImageView
+        android:id="@+id/minusCircle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toStartOf="@+id/plusCircle"
+        app:layout_constraintTop_toTopOf="@+id/img_bottombar2"
+        app:srcCompat="@drawable/minuscircle" />
+
+    <ImageView
+        android:id="@+id/plusCircle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/Navigationbar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_addCart"
+        app:layout_constraintTop_toTopOf="@+id/img_bottombar2"
+        app:srcCompat="@drawable/pluscircle" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"

@@ -33,7 +33,7 @@ public class Cart extends AppCompatActivity {
     RecyclerView recyclerView;
     CartAdapter cartAdapter;
     ArrayList<CartModel> cartModelList;
-    int total = 0 ;
+    int total = 0;
 
     TextView topProductPrice;
     Button complateShop;
@@ -45,7 +45,6 @@ public class Cart extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
 
 
-
         getProducts();
         bottomBarOptions();
         complate();
@@ -53,17 +52,16 @@ public class Cart extends AppCompatActivity {
 
     }
 
-    public void complate(){
+    public void complate() {
 
         complateShop = findViewById(R.id.complateShopping);
 
         complateShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Adress.class));
+                startActivity(new Intent(getApplicationContext(), Adress.class));
             }
         });
-
 
 
     }
@@ -83,12 +81,6 @@ public class Cart extends AppCompatActivity {
         topProductPrice = findViewById(R.id.txt_total_price);
 
 
-
-
-
-
-
-
         db.collection("AddToCart").document(auth.getCurrentUser().getUid())
                 .collection("CurrentUser").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -105,11 +97,16 @@ public class Cart extends AppCompatActivity {
                         cartModelList.add(cartModel);
 
                         //Burada sepetteki toplam fiyat kısmının kodlaması var.
-                        total += Integer.parseInt(cartModel.getProductPrice());
+                        for (int i = cartModelList.size(); i > 0; i--) {
+                            total += Integer.parseInt(cartModel.getProductPrice())*cartModel.getQuantity();//HATALI
+
+                        }
 
 
                         cartAdapter.notifyDataSetChanged();
                     }
+
+
                 }
                 //sepetteki ürünlerin toplam değeri ekrana yazdırılır.
                 topProductPrice.setText(String.valueOf(total));

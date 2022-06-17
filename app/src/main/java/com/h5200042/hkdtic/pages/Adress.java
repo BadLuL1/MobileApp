@@ -24,6 +24,7 @@ import com.h5200042.hkdtic.adaptor.AdressAdapter;
 import com.h5200042.hkdtic.model.AdressModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Adress extends AppCompatActivity {
 

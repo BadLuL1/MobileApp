@@ -14,6 +14,10 @@
     <string name="surname">soyadınız</string>
     <string name="phone_number">telefon numarası</string>
     <string name="phone_example">5xx xxx xx xx</string>
+    <string name="card_number">kart numarası</string>
+    <string name="card_number2">**** **** **** ****</string>
+    <string name="card_name">kart sahibinin adı ve soyadı</string>
+    <string name="card_name2">kart üzerindeki isim</string>
     <string name="signUp">Kayıt Ol</string>
     <string name="kaydet">KAYDET</string>
     <string name="wizard_password">Şifre sihirbazına hoş geldiniz. Lütfen şifrenizi nasıl kurtarmak istediğinizi seçiniz.</string>
@@ -41,7 +45,19 @@
     <string name="kategoriler_baslik">KATEGORİLER</string>
     <string name="sepet_baslik">SEPET</string>
     <string name="siparis_baslik">SİPARİŞLER</string>
+    <string name="kart_baslik">KARTLAR</string>
+    <string name="siparis_onayla">Siparişi Onayla</string>
     <string name="adres_ekle">Adres Ekle</string>
+    <string name="cvv_nerede">CVC/CVV Nerede?</string>
+    <string name="cvv_yazi">CVV kodu veya güvenlik numarası,
+kredi kartının arka yüzündeki, genelde
+beyaz alana basılı rakamların son 3
+hanesidir. Aşağıdaki resimdeki
+örnekte kırmızı daire içinde görülen
+3 rakamdır.
+
+</string>
+    <string name="kart_ekle">Kart Ekle</string>
     <string name="Adres_bilgi_baslik">Adres Bilgileri</string>
     <string name="todo_elektronik">Elektronik kategori buton</string>
     <string name="todo_elektronik1">Elektronik kategori yazi</string>
